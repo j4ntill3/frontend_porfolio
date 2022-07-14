@@ -1,0 +1,39 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+#header-top{
+    height: 80px;
+    background: #8FD1AD;
+}
+
+#cont-logo-texto{
+    float: left;
+    width: 16%;
+    height: 100%;
+}
+
+#logo{
+    float: left;
+}
+
+#texto-logo{
+    display: inline-block;
+}
+
+header p{
+    font-size: 1.5rem;
+}
+
+#cont-botones-header{
+    float: right;
+}
+
+.btn-header{
+    display: inline-block;
+}
+
+
+
+
