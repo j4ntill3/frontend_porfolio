@@ -4,69 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Titulo</title>
-    <link rel=stylesheet type="text/css" href="style.css">
-    <!-- <script src="script.js" language="javascript" type="text/javascript"></script> -->
+    
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
 </head>
 
-<body class="conatiner">
-
+<body>
     <!-- HEADER -->
     <header class="container">
-        <div id="menu" class="container d-flex justify-content-between">
+        <div id="menu" class="d-flex justify-content-between">
             <div id="cont-logo-texto" class="d-flex justify-content-between">
                 <div id="logo">
-                    <img src="img/icons8-consola-96.png">
+                    <img src="img/icons8-consola-96.png" class="img-fluid">
                 </div>
                 <div id="texto-logo" class="d-flex flex-column justify-content-between">
-                    <p id="arg-prog"
-                        style="font-family: 'Roboto mono bold';font-weight: 700;margin-bottom: 4px; margin-top: 10px;font-size: 1.3rem;">
-                        Argentina Programa</p>
-                    <p id="yo-prog" style="font-family: 'Roboto mono semibold';font-weight: 500;font-size: 1.3rem;">
-                        #YoProgramo</p>
+                    <span id="arg-prog">Argentina Programa</span>
+                    <span id="yo-prog">#YoProgramo</span>
                 </div>
             </div>
             <div id="cont-botones-header" class="d-flex align-items-center justify-content-center">
-                <div class="btn-header mx-auto">
-                    <a href="https://www.instagram.com/j.4nt1ll3/"><img src="img/icons8-instagram-48.png"></a>
+                <div id="instagram" class="mx-auto">
+                    <a href="https://www.instagram.com/j.4nt1ll3/"><img src="img/icons8-instagram-48.png"
+                            class="img-fluid"></a>
                 </div>
-                <div class="btn-header mx-auto">
+                <div id="linkedin" class="mx-auto">
                     <a href="https://www.linkedin.com/in/jos%C3%A9-antille-6a361321b/"><img
-                            src="img/icons8-linkedin-rodeado-de-círculo-48.png"></a>
+                            src="img/icons8-linkedin-rodeado-de-círculo-48.png" class="img-fluid"></a>
                 </div>
-                <div class="btn-header mx-auto">
-                    <img src="img/icons8-login-67.png">
+                <div id="login" class="mx-auto">
+                    <img src="img/icons8-login-67.png" class="img-fluid">
                 </div>
             </div>
         </div>
-        <div id="portada" class="container">
+        <div id="portada">
             <img src="img/thumb-1920-626155.jpg" class="img-fluid">
         </div>
     </header>
     <!-- HEADER END -->
 
-    <!-- FOTO DE PERFIL -->
-    <img id="foto-perfil" class="position-absolute" src="img/foto-perfil.PNG">
-
+    <!-- FOTO DE PERFIL 
+    <div id="cont-foto-perfil" class="position-absolute container">
+        <div id="foto-perfil">
+            <img src="img/foto-perfil.PNG" class="rounded-circle img-fluid">
+        </div>
+    </div>-->
     <!-- DESCRIPTION -->
-    <div id="descripcion" class="container">
+    <div id="descripcion" class="container border rounded">
         <div id="cont-acerca-de" class="row">
-            <div id="cont-nombre-titulo" class="col-3 d-flex flex-column align-items-center">
-                <h1 id="nombre">José Antille</h1>
-                <h1 id="fullstack">Full Stack Developer Jr</h1>
+            <div id="cont-nombre-titulo"
+                class="col-sm-12 col-md-3 col-lg-3 col-xl-3 d-flex flex-column align-items-center">
+                <!--<img id="foto-perfil" src="img/foto-perfil.PNG">-->
+                <span id="nombre">José Antille</span>
+                <span id="full">Full Stack Developer</span>
             </div>
-            <div id="cont-descripcion" class="col-9">
-                <h2>Acerca de mi</h2>
+            <div id="cont-descripcion" class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+                <h4>Acerca de mi</h4>
                 <p>
-                    ¡Hola, buenas! Actualmente estoy finalizando mis estudios formales como <strong>Desarrollador de
-                    Software</strong> y me encuentro en la busqueda de mis primeras <strong>experiencias profesionales</strong>. Además de
-                    mis estudios formales estoy constantemente aprendiendo de manera <strong>autodidacta</strong> con
-                    diferentes cursos online, información de internet y libros.
+                    Estudiante avanzado de Tecnicatura en Desarrollo de Software, autodidacta de la vida, fanatico de
+                    matrix y la retro
+                    informatica.
                 </p>
-                <p>¡Muchas gracias por leer!</p>
             </div>
         </div>
     </div>
@@ -82,212 +82,161 @@
     <!-- EXPERIENCIA END -->
 
     <!-- EDUCACION -->
-    <div id="educacion" class="container">
-        <h2>Educación</h2>
-        <div class="row educacion-item">
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <img src="img/Sin_titulo-1.png">
+    <div id="educacion" class="container border rounded">
+        <div id="cont-titulo-educacion" class="row">
+            <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2rem;">
+                <span id="titulo-educacion">Educación</span>
             </div>
-            <div class="col-9 d-flex flex-column align-items-start justify-content-center">
-                <p id="nombre-institucion">Instituto Superior de Comercio Nro 46 Domingo Guzmán Silva</p>
-                <p id="anios-curso">2022 - actual</p>
-                <p id="nombre-certificacion">Tecnicatura Superior en Desarrollo de Software</p>
-                <p id="descripcion-curso">Me encuentro actualmente cursando y rindiendo materias de 3er y 2do año.</p>
+            <div class="col"></div>
+        </div>
+        <div class="row educacion-item d-flex align-items-start justify-content-center">
+            <div class="cont-item-educacion border rounded d-flex align-items-start justify-content-center">
+                <div class="col-3 d-flex justify-content-center colum-img-educacion">
+                    <div class="cont-img-educacion"><img src="img/Sin_titulo-1.png" class="img-fluid"></div>
+                </div>
+                <div class="col-9 d-flex flex-column align-items-start justify-content-center" style="padding: 0px;">
+                    <span class="nombre-institucion">Instituto Superior de Comercio Domingo Guzmán Silva</span>
+                    <span class="nombre-certificacion">Tecnicatura en Desarrollo de Software</span>
+                    <span class="descripcion-curso">Me encuentro actualmente cursando y rindiendo materias de 3er y 2do
+                        año.</span>
+                </div>
             </div>
         </div>
-        <div class="row educacion-item">
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <img src="img/logo-instituto-de-estudios-superiores-ies.jpg">
-            </div>
-            <div class="col-9 d-flex flex-column align-items-start justify-content-center">
-                <p id="nombre-institucion">Instituto de Estudios Superiores (I.E.S)</p>
-                <p id="anios-curso">2021 - 2022</p>
-                <p id="nombre-certificacion">Tecnicatura Superior en Desarrollo de Software</p>
-                <p id="descripcion-curso">Curse un año y luego me cambie de instituto.</p>
-            </div>
-        </div>
-        <div class="row educacion-item">
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <img src="img/unl-logo.PNG">
-            </div>
-            <div class="col-9 d-flex flex-column align-items-start justify-content-center">
-                <p id="nombre-institucion">FICH - Facultad de Ingeniería y Ciencias Hídricas (U.N.L)</p>
-                <p id="anios-curso">2016 - 2020</p>
-                <p id="nombre-certificacion">Ingeniería en Informatica Aplicada</p>
-                <p id="descripcion-curso">2do año.</p>
+        <div class="row educacion-item d-flex align-items-start justify-content-center">
+            <div class="cont-item-educacion border rounded d-flex align-items-start justify-content-center">
+                <div class="col-3 d-flex justify-content-center colum-img-educacion">
+                    <div class="cont-img-educacion"><img src="img/logo-instituto-de-estudios-superiores-ies.jpg"
+                            class="img-fluid"></div>
+                </div>
+                <div class="col-9 d-flex flex-column align-items-start justify-content-center" style="padding: 0px;">
+
+                    <span class="nombre-institucion">Instituto de Estudios Superiores (I.E.S)</span>
+                    <span class="nombre-certificacion">Tecnicatura en Desarrollo de Software</span>
+                    <span class="descripcion-curso">Curse un año y luego me cambie de instituto.</span>
+
+                </div>
             </div>
         </div>
-        <div class="row educacion-item">
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <img src="img/i2t.png">
-            </div>
-            <div class="col-9 d-flex flex-column align-items-start justify-content-center">
-                <p id="nombre-institucion">i2T Soluciones en Software (S.A)</p>
-                <p id="anios-curso">2020 - 2020</p>
-                <p id="nombre-certificacion">Bootcamp POO en Java y Bases de Datos</p>
-            </div>
-        </div>
-        <div class="row educacion-item">
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <img src="img/i2t.png">
-            </div>
-            <div class="col-9 d-flex flex-column align-items-start justify-content-center">
-                <p id="nombre-institucion">Etapa 1 Plan Argentina Programa: #SéProgramar</p>
-                <p id="anios-curso">2022 - 2022</p>
-                <p id="nombre-certificacion">Fundamentos, Programación Imperativa y POO</p>
-                <p id="descripcion-curso">Beca otorgada por la empresa i2T, fui seleccionado junto con otros 200
-                    participantes.</p>
-            </div>
-        </div>
-        <div class="row educacion-item">
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <img src="img/i2t.png">
-            </div>
-            <div class="col-9 d-flex flex-column align-items-start justify-content-center">
-                <p id="nombre-institucion">Etapa 2 Plan Argentina Programa: #YoProgramo</p>
-                <p id="anios-curso">2022 - actual</p>
-                <p id="nombre-certificacion">Desarrollo Web Dinámico, Bases de Datos, Java (JSP, Servlets, Sockets,
-                    Spring Boot)</p>
-                <p id="descripcion-curso">Beca otorgada por la empresa i2T, fui seleccionado despues de mi buen
-                    rendimiento en la etapa 1 del programa
-                    junto con otros 50 participantes.</p>
+        <div class="row educacion-item d-flex align-items-start justify-content-center">
+            <div class="cont-item-educacion border rounded d-flex align-items-start justify-content-center">
+                <div class="col-3 d-flex justify-content-center colum-img-educacion">
+                    <div class="cont-img-educacion"><img src="img/unl-logo.PNG" class="img-fluid"></div>
+                </div>
+                <div class="col-9 d-flex flex-column align-items-start justify-content-center" style="padding: 0px;">
+
+                    <span class="nombre-institucion">FICH - Facultad de Ingeniería y Ciencias Hídricas (U.N.L)</span>
+                    <span class="nombre-certificacion">Ingeniería en Informatica Aplicada</span>
+                    <span class="descripcion-curso">2do año.</span>
+
+                </div>
             </div>
         </div>
     </div>
     <!-- EDUCACION END -->
 
     <!-- PROYECTOS -->
-    <div id="proyectos" class="container">
-        <h2>Proyectos</h2>
-        <div class="row educacion-item">
-            <div class="col-12 d-flex flex-column align-items-start justify-content-center">
-                <p id="titulo-proyecto">Sistema de Gestion para Estacionamientos</p>
-                <p id="anio-proyecto">2020</p>
-                <p id="descripcion-proyecto">Proyecto Final para la catedra de "Programación Orientada a Objetos" de la
-                    carrera Ingeniería en Informatica (U.N.L),
-                    programado en C++ utilizando el paradigma POO.
-                </p>
-                <a href="https://github.com/j4ntill3/gestion-estacionamiento-POO"><button type="button"
-                        class="btn btn-info">Ver Proyecto</button></a>
+    <div id="proyectos" class="container border rounded">
+        <div id="cont-titulo-proyectos" class="row">
+            <div class="col-6 d-flex justify-content-center">
+                <span id="titulo-proyectos">Proyectos</span>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row proyecto-item">
+            <div class="cont-item-proyecto border rounded d-flex align-items-start justify-content-center">
+                <div class="col-12 d-flex flex-column align-items-start justify-content-center" style="padding: 0px">
+                    <span id="titulo-proyecto">Sistema de Gestion para Estacionamientos</span>
+                    <span id="descripcion-proyecto">Proyecto Final para la catedra de "Programación Orientada a Objetos"
+                        de la
+                        carrera Ingeniería en Informatica (U.N.L),
+                        programado en C++ utilizando el paradigma POO.
+                    </span>
+                    <a href="https://github.com/j4ntill3/gestion-estacionamiento-POO"><button type="button"
+                            class="btn btn-info">Ver Proyecto</button></a>
+                </div>
             </div>
         </div>
-        <div class="row educacion-item">
-            <div class="col-12 d-flex flex-column align-items-start justify-content-center">
-                <p id="titulo-proyecto">Portfolio Web (en desarrollo)</p>
-                <p id="anio-proyecto">2022</p>
-                <p id="descripcion-proyecto">Proyecto Final para la etapa numero 2 del curso "Argentina Programa:
-                    #YoProgramo".
-                </p>
-                <button type="button" class="btn btn-info" disabled>Ver Proyecto</button>
+        <div class="row proyecto-item">
+            <div class="cont-item-proyecto border rounded d-flex align-items-start justify-content-center">
+                <div class="col-12 d-flex flex-column align-items-start justify-content-center" style="padding: 0px">
+                    <span id="titulo-proyecto">Portfolio Web (en desarrollo)</span>
+                    <span id="descripcion-proyecto">Proyecto Final para la etapa numero 2 del curso "Argentina Programa:
+                        #YoProgramo".
+                    </span>
+                    <button type="button" class="btn btn-info" disabled>Ver Proyecto</button>
+                </div>
             </div>
         </div>
+
     </div>
     <!-- PROYECTOS END -->
 
     <!-- SKILLS -->
-    <div id="skills" class="container">
-        <h2>Skills</h2>
-        <div class="row">
-            <div class="col-4">
+
+    <div id="skills">
+        <div id="cont-skills" class="container border rounded">
+            <div id="cont-titulo-skills" class="row">
+                <div class="col-5 d-flex justify-content-center">
+                    <span id="titulo-skills">Skills</span>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="item-progreso">
+                <span>Java</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="java" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">Java</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="item-progreso">
+                <span>C++</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="cplusplus" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">C++</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="item-progreso">
+                <span>Angular</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="javascript" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">JavaScript</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
+            <div class="item-progreso">
+                <span>TypeScript</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="sql" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">SQL/MySQL</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="item-progreso">
+                <span>MySQL</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="git" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">Git/GitHub</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="item-progreso">
+                <span>Git</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="bash" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">Bash</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
+            <div class="item-progreso">
+                <span>Bash</span>
                 <div class="progress">
-                    <span class="progress-left">
-                        <span id="html" class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                        <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">HTML/CSS</div>
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
             </div>
+            <div style="margin-bottom: 1rem;"></div>
         </div>
     </div>
     <!-- SKILLS END -->
-
     <!-- FOOTER -->
-    <footer class="container d-flex align-items-center justify-content-center">
-        <p>Desarrollado por José Antille</p>
+    <footer class="d-flex align-items-center justify-content-center">
+        <spam id="footer-desarrollador">Desarrollado por José Antille</spam>
     </footer>
     <!-- FOOTER END-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 <!-- Bootstrap CDN -->
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
-    </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-    integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
-    </script>
 
 </html>
