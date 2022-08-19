@@ -1,1 +1,1 @@
-Esta página web estática fue diseñada para un resolución de 1920 x 1080. Por favor visualizarla en dicha resolución para poder verla bien. 
+Frontend del proyecto final integrador de la capacitación de i2T S.A. y el plan Argentina Programa, Jose Antille.
