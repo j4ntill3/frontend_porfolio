@@ -59,28 +59,14 @@ header {
   -webkit-text-stroke: 0.25px #191919;
 }
 
-#portada {
-  padding-bottom: 2.5%;
-}
-
-#portada img {
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px black;
-}
-
 /* HEADER END */
 
-#foto-perfil {
-  border-radius: 50%;
-  box-shadow: 2px 2px 2px black;
-}
 
 /* DESCRIPTION */
 
 #descripcion {
-  margin-bottom: 2.5%;
   padding: 20px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  border-bottom: 1px solid #dee2e6
 }
 
 #cont-acerca-de {
@@ -117,7 +103,8 @@ header {
 #educacion {
   padding-top: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  border-bottom: 1px solid #dee2e6
+
 }
 
 .colum-img-educacion {
@@ -125,7 +112,7 @@ header {
 }
 
 .cont-item-educacion {
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+
   width: 90% !important;
   margin-bottom: 20px;
 }
@@ -157,14 +144,13 @@ header {
 /* EDUACION END */
 
 /* FOTO PERFIL */
-#cont-foto-perfil {
-  right: 4%;
-  top: 124%;
-}
 
 #foto-perfil {
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+  margin-top: -7rem;
+  margin-left: 46px;
 }
 
 /* PROYECTOS */
@@ -190,12 +176,13 @@ header {
   width: 90% !important;
   margin: auto;
   padding: 20px;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+
 }
 
 #proyectos {
   margin-bottom: 1.5rem;
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+  border-bottom: 1px solid #dee2e6
+
 }
 
 .proyecto-item {
@@ -208,7 +195,7 @@ header {
   font-weight: bold;
 }
 
-.cont-item-educacion{
+.cont-item-educacion {
   padding: 0.5rem;
 }
 
@@ -222,8 +209,8 @@ header {
   margin-bottom: 1.5rem;
 }
 
-#cont-skills{
-  box-shadow: 0.5px 0.5px 0.5px 0.5px black;
+#skills{
+  border-bottom: 1px solid #dee2e6;
 }
 
 .item-progreso {
@@ -250,11 +237,6 @@ header {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-
-  body{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
 
   /* HEADER */
 
@@ -354,7 +336,7 @@ header {
     font-size: 1.2rem;
   }
 
-  .cont-item-educacion{
+  .cont-item-educacion {
     padding: 0.8rem;
   }
 
@@ -381,11 +363,6 @@ header {
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
-
-  body{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
 
   /* HEADER */
 
@@ -485,7 +462,7 @@ header {
     font-size: 1.3rem;
   }
 
-  .cont-item-educacion{
+  .cont-item-educacion {
     padding: 0.9rem;
   }
 
@@ -510,13 +487,6 @@ header {
   /* FOOTER END */
 }
 
-@media (min-width: 576px){
-  body{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
 
@@ -525,6 +495,7 @@ header {
   #menu {
     height: 80px;
   }
+
   #nombre {
     font-size: 1.5rem;
   }
@@ -613,7 +584,7 @@ header {
     font-size: 1.4rem;
   }
 
-  .cont-item-educacion{
+  .cont-item-educacion {
     padding: 1rem;
   }
 
@@ -735,7 +706,7 @@ header {
     font-size: 1.5rem;
   }
 
-  .cont-item-educacion{
+  .cont-item-educacion {
     padding: 1.1rem;
   }
 
@@ -842,7 +813,7 @@ header {
     font-size: 1.6rem;
   }
 
-  .cont-item-educacion{
+  .cont-item-educacion {
     padding: 1.2rem;
   }
 
