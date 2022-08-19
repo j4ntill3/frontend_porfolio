@@ -1,1 +1,1 @@
-Esta página web estática fue diseñada para un resolución de 1920 x 1080. Por favor visualizarla en dicha resolución para poder verla bien. 
+Proyecto final argentina programa, frontend, jose antille.
