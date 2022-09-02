@@ -1,0 +1,24 @@
+<div id="proyectos" class="container  ">
+
+    <!-- Titulo Proyectos -->
+
+    <div id="cont-titulo-proyectos" class="row">
+        <div class="col-6 d-flex justify-content-center">
+            <span id="titulo-proyectos">Proyectos</span>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <!-- Directiva de proyectos -->
+
+    <div *ngFor="let proyecto of proyectosArray" class="row proyecto-item">
+        <div class="cont-item-proyecto border rounded d-flex align-items-start justify-content-center">
+            <div class="col-12 d-flex flex-column align-items-start justify-content-center" style="padding: 0px">
+                <span id="titulo-proyecto">{{proyecto.nombre}}</span>
+                <span id="descripcion-proyecto">{{proyecto.descripcion}}</span>
+                <a href={{proyecto.link}}><button type="button" class="btn btn-info">Ver Proyecto</button></a>
+            </div>
+        </div>
+    </div>
+
+</div>

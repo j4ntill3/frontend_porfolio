@@ -1,0 +1,27 @@
+<div id="educacion" class="container  ">
+
+    <!-- Titulo Educacion -->
+
+    <div id="cont-titulo-educacion" class="row">
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2rem;">
+            <span id="titulo-educacion">Educación</span>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <!-- Directiva que muestra los elementos de Educacion -->
+
+    <div *ngFor="let institucion of institucionArray"
+        class="row educacion-item d-flex align-items-start justify-content-center">
+        <div class="cont-item-educacion border rounded  d-flex align-items-start justify-content-center" style="margin: 10px;">
+            <div class="col-1 d-flex justify-content-start colum-img-educacion">
+                <div class="cont-img-educacion"><img src={{institucion.img}} class="img-fluid rounded"></div>
+            </div>
+            <div class="col-11 d-flex flex-column align-items-start justify-content-center" style="margin-left: 10px;">
+                <span class="nombre-institucion">{{institucion.nombre}}</span>
+                <span class="nombre-certificacion">{{institucion.certificacion}}</span>
+                <span class="descripcion-curso">{{institucion.descripcion}}</span>
+            </div>
+        </div>
+    </div>
+</div>

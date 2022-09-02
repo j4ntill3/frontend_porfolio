@@ -1,1 +1,0 @@
-Frontend del proyecto final integrador de la capacitación de i2T S.A. y el plan Argentina Programa, Jose Antille.

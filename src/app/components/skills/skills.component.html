@@ -1,0 +1,23 @@
+<div id="skills">
+    <div id="cont-skills" class="container">
+
+        <!-- Titulo Skills-->
+
+        <div id="cont-titulo-skills" class="row">
+            <div class="col-5 d-flex justify-content-center">
+                <span id="titulo-skills">Skills</span>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <!-- Directiva Skills -->
+
+        <div *ngFor="let skill of skillsArray" class="item-progreso">
+            <span>{{skill.nombre}}</span>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" [style.width]="skill.porcentaje+'%'"  attr.aria-valuenow="{{skill.porcentaje}}"
+                    aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+
+</div>
