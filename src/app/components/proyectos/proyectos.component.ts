@@ -8,6 +8,8 @@ import { Proyecto } from 'src/app/models/proyecto';
 })
 export class ProyectosComponent implements OnInit {
 
+  /* Array que guerda los items de la seccion Proyectos */
+
   proyectosArray: Proyecto[] = [
     {
       id: 0,

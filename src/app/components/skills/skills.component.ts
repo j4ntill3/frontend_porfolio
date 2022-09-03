@@ -8,6 +8,8 @@ import { Skill } from 'src/app/models/skill'
 })
 export class SkillsComponent implements OnInit {
 
+  /* Array que gurada los items de Skills */
+
   skillsArray: Skill[] = [
     { id: 0, nombre: "Java", porcentaje: "70" },
     { id: 1, nombre: "C++", porcentaje: "65" },

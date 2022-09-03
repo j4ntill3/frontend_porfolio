@@ -8,6 +8,8 @@ import { Institucion } from 'src/app/models/institucion';
 })
 export class EducacionComponent implements OnInit {
 
+  /* Array que guarda los items de la seccion Educacion */
+
   institucionArray: Institucion[] = [
 
     {
@@ -24,7 +26,7 @@ export class EducacionComponent implements OnInit {
     },
     {
       id: 2, nombre: "FICH - Facultad de Ingeniería y Ciencias Hídricas (U.N.L)",
-      certificacion: "Ingeniería en Informática Aplicada",
+      certificacion: "Ingeniería en Informática",
       descripcion: "2do año.",
       img: "./assets/unl-logo.PNG"
     },
@@ -37,7 +39,7 @@ export class EducacionComponent implements OnInit {
     {
       id: 4, nombre: 'i2T S.A. - "Argentina Programa"',
       certificacion: "Etapa 1: #SeProgramar",
-      descripcion: "Beca de capacitación otorgada por i2T S.A. Fui seleccionado entre otros 200 participantes a traves de una encuesta.",
+      descripcion: "Beca de capacitación otorgada por i2T S.A. Fui seleccionado entre otros 200 participantes a través de una encuesta.",
       img: "./assets/i2t.png"
     },
     {
