@@ -1,7 +1,10 @@
-/* Clase que representa los items de la seccion Skills */
-
 export class Skill {
     id: number;
-    nombre: string;
-    porcentaje: string;
+    nombreS: string;
+    porcentaje: number;
+
+    constructor(nombreS: string, porcentaje: number){
+        this.nombreS = nombreS;
+        this.porcentaje = porcentaje;
+    }
 }

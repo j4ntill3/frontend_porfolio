@@ -1,8 +1,12 @@
-/* Clase que representa los items de la seccion Proyecto */
-
 export class Proyecto {
     id: number;
-    nombre: string;
-    descripcion: string;
-    link: string;
+    nombreP: String;
+    descripcionP: String;
+    urlP: String;
+
+    constructor(nombreP: String, descripcionP: String, urlP: String){
+        this.nombreP = nombreP;
+        this.descripcionP = descripcionP;
+        this.urlP = urlP;
+    }
 }

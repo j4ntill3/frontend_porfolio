@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/models/proyecto';
+import { ProyectoService } from 'src/app/service/proyecto.service';
+import { TokenService } from 'src/app/service/token.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-proyectos',
@@ -8,26 +11,41 @@ import { Proyecto } from 'src/app/models/proyecto';
 })
 export class ProyectosComponent implements OnInit {
 
-  /* Array que guerda los items de la seccion Proyectos */
+  proyecto: Proyecto[] = [];
 
-  proyectosArray: Proyecto[] = [
-    {
-      id: 0,
-      nombre: "Sistema de Gestion para Estacionamientos",
-      descripcion: "Proyecto Final para la catedra de 'Programación Orientada a Objetos' de la carrera Ingeniería en Informatica (U.N.L), programado en C++ utilizando el paradigma POO.",
-      link: "https://github.com/j4ntill3/gestion-estacionamiento-POO"
-    },
-    {
-      id: 1,
-      nombre: "Portfolio Web (en desarrollo)",
-      descripcion: 'Proyecto Final para BootCamp dictado por i2T S.A. y "Argentina Programa". Etapa 2 "#YoProgramo". Es un porfolio web que se desarrollara en base a las tecnologias impartidas en el curso (HTML,CSS,Bootstrap,Angular,TypeScript,Java,JSP,SringBoot,MySQL).',
-      link: "https://github.com/j4ntill3/yo_programo_frontend_jose_antille.git"
-    }
-  ]
-
-  constructor() { }
+  constructor(private proyectoS: ProyectoService, private tokenService: TokenService, private router: Router) { }
+  isLogged = false;
 
   ngOnInit(): void {
+    this.cargarProyecto();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
+  cargarProyecto(): void{
+    this.proyectoS.lista().subscribe(
+      data =>{
+        this.proyecto = data;
+      }
+    )
+  }
+
+  delete(id?: number){
+    if( id != undefined){
+      this.proyectoS.delete(id).subscribe(
+        {
+        next: resp => {
+          this.cargarProyecto();
+          location.reload();
+        },
+          error: err => {
+            location.reload();
+          }
+      })
+      location.reload();
+    }
+  }
 }

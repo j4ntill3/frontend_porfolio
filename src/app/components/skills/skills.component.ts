@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Skill } from 'src/app/models/skill'
+import { SkillService } from 'src/app/service/skill.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -8,21 +11,51 @@ import { Skill } from 'src/app/models/skill'
 })
 export class SkillsComponent implements OnInit {
 
-  /* Array que gurada los items de Skills */
-
-  skillsArray: Skill[] = [
-    { id: 0, nombre: "Java", porcentaje: "70" },
-    { id: 1, nombre: "C++", porcentaje: "65" },
-    { id: 2, nombre: "Angular", porcentaje: "40" },
-    { id: 3, nombre: "TypeScript", porcentaje: "40" },
-    { id: 4, nombre: "MySQL", porcentaje: "60" },
-    { id: 5, nombre: "Git", porcentaje: "80" },
-    { id: 6, nombre: "Bash", porcentaje: "50" }
-  ]
-
-  constructor() { }
+  constructor(private skillS: SkillService, private tokenService: TokenService, private router: Router) { }
+  isLogged = false;
+  skill: Skill[] = [];
 
   ngOnInit(): void {
+    this.cargarSkill();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
+  cargarSkill(): void{
+    this.skillS.lista().subscribe(
+      data =>{
+        this.skill = data;
+      }
+    )
+  }
+
+  delete(id?: number){
+    if( id != undefined){
+      this.skillS.delete(id).subscribe(
+        {
+        next: resp => {
+          this.cargarSkill();
+          location.reload();
+        },
+          error: err => {
+            location.reload();
+          }
+      })
+      location.reload();
+    }
+  }
+
+
 }
+
+
+
+
+
+
+
+
+
